@@ -14,7 +14,7 @@ The projects are organized by technical complexity, focusing on different aspect
 | **Medium** | **[Expense-Lens](./medium/expense-lens)** | Math Logic & Dynamic List (CRUD) |
 | **Medium** | **[Crypto-Tracker](./hard/crypto-tracker)** | Real-time Data Formatting & Async/Await |
 | **Medium** | **[Weather Switcher](./medium/weather-switcher)** | Conditional Theming & Dynamic CSS Variables |
-| **Medium+** | **[Meme Generator](./medium-plus/meme-generator)** | HTML5 Canvas API & Image Processing |
+| **Medium+** | **[Meme Generator](./medium/meme-generator)** | HTML5 Canvas API & Image Processing |
 | **Hard** | **[Habit Tracker](./hard/habit-tracker)** | Native Drag-and-Drop API & LocalStorage |
 | **Hard** | **[Resume Builder](./hard/resume-builder)** | Real-time State Sync & Complex DOM Updates |
 
