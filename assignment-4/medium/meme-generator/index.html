@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Meme Generator</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<div class="container">
+
+    <h1>Meme Generator 😂</h1>
+
+    <div class="controls">
+
+        <select id="template">
+            <option value="https://i.imgflip.com/1bij.jpg">Drake Hotline Bling</option>
+            <option value="https://i.imgflip.com/26am.jpg">Distracted Boyfriend</option>
+            <option value="https://i.imgflip.com/2fm6x.jpg">Two Buttons</option>
+        </select>
+
+        <input type="text" id="topText" placeholder="Top Text">
+        <input type="text" id="bottomText" placeholder="Bottom Text">
+
+        <input type="color" id="textColor" value="#ffffff">
+
+        <button onclick="generateMeme()">Generate Meme</button>
+        <button onclick="downloadMeme()">Download Meme</button>
+
+    </div>
+
+    <div class="canvas-box">
+        <canvas id="canvas"></canvas>
+    </div>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Recipe Finder</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<div class="container">
+
+    <h1>🍽 Recipe Finder</h1>
+
+    <div class="controls">
+        <select id="cuisine">
+            <option value="Italian">Italian</option>
+            <option value="Indian">Indian</option>
+            <option value="Chinese">Chinese</option>
+            <option value="American">American</option>
+            <option value="Mexican">Mexican</option>
+        </select>
+
+        <input type="number" id="count" placeholder="Number of Recipes" min="1" max="12">
+
+        <button onclick="fetchRecipes()">Find Recipes</button>
+    </div>
+
+    <div id="status" class="status"></div>
+
+    <div id="recipes" class="recipes-grid"></div>
+
+</div>
+
+<!-- Modal -->
+<div id="modal" class="modal hidden">
+    <div class="modal-content">
+        <span class="close" onclick="closeModal()">×</span>
+        <div id="modal-body"></div>
+    </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

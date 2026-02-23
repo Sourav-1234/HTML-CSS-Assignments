@@ -1,0 +1,100 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: system-ui, -apple-system, sans-serif;
+}
+
+body {
+    background: #f5f6fa;
+    display: flex;
+    justify-content: center;
+    padding: 40px 15px;
+}
+
+.app {
+    width: 100%;
+    max-width: 1000px;
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+.controls {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 25px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.controls input,
+.controls select {
+    padding: 10px;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+}
+
+button {
+    padding: 10px 16px;
+    border: none;
+    border-radius: 8px;
+    background: black;
+    color: white;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #333;
+}
+
+.board {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+}
+
+.column {
+    background: white;
+    padding: 15px;
+    border-radius: 14px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+}
+
+.column h2 {
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.dropzone {
+    min-height: 300px;
+    padding: 10px;
+    border-radius: 10px;
+    background: #f1f2f6;
+}
+
+.habit {
+    background: white;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 10px;
+    cursor: grab;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.habit small {
+    display: block;
+    color: gray;
+    font-size: 12px;
+}
+
+.delete {
+    color: red;
+    cursor: pointer;
+    font-size: 14px;
+}

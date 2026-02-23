@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Weather Theme Switcher</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<div class="app">
+
+    <h1>Weather Theme Switcher</h1>
+
+    <div class="search">
+        <input type="text" id="cityInput" placeholder="Enter city name">
+        <button onclick="getWeather()">Search</button>
+    </div>
+
+    <p id="status" class="status"></p>
+
+    <div id="weatherCard" class="weather-card hidden">
+        <img id="weatherIcon">
+        <h2 id="temperature"></h2>
+        <p id="condition"></p>
+    </div>
+
+    <div class="override">
+        <label>Override Theme</label>
+        <input type="color" id="colorPicker">
+        <button onclick="overrideTheme()">Apply</button>
+    </div>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

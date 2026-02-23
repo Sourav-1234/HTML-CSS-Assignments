@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Resume Section Builder</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<div class="app">
+
+    <h1>Resume Builder</h1>
+
+    <div class="controls">
+        <input type="text" id="sectionTitle" placeholder="Section Title">
+        <textarea id="sectionContent" placeholder="Section Content"></textarea>
+        <button onclick="addSection()">Add Section</button>
+    </div>
+
+    <div class="layout">
+
+        <!-- Editor -->
+        <div class="panel">
+            <h2>Sections</h2>
+            <div id="sections" class="sections"></div>
+        </div>
+
+        <!-- Preview -->
+        <div class="panel preview">
+            <h2>Live Preview</h2>
+            <div id="preview"></div>
+        </div>
+
+    </div>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

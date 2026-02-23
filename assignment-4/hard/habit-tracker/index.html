@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Habit Tracker</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<div class="app">
+    <h1>Habit Tracker</h1>
+
+    <div class="controls">
+        <input type="text" id="habitInput" placeholder="New habit...">
+        <select id="categorySelect">
+            <option>Morning</option>
+            <option>Work</option>
+            <option>Evening</option>
+        </select>
+        <button onclick="addHabit()">Add</button>
+    </div>
+
+    <div class="board">
+
+        <!-- To Do -->
+        <div class="column">
+            <h2>To Do</h2>
+            <div class="dropzone" id="todo"></div>
+        </div>
+
+        <!-- In Progress -->
+        <div class="column">
+            <h2>In Progress</h2>
+            <div class="dropzone" id="progress"></div>
+        </div>
+
+        <!-- Done -->
+        <div class="column">
+            <h2>Done</h2>
+            <div class="dropzone" id="done"></div>
+        </div>
+
+    </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

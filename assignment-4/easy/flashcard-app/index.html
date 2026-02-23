@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Flashcard Learning App</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+<div class="container">
+
+    <h1>Flashcard Learning</h1>
+
+    <div id="setup">
+        <select id="topic">
+            <option value="math">Math</option>
+            <option value="science">Science</option>
+        </select>
+
+        <input type="number" id="count" placeholder="Number of Questions" min="1" max="5">
+
+        <button onclick="startQuiz()">Start</button>
+    </div>
+
+    <div id="quiz" class="hidden">
+
+        <div class="flashcard">
+            <div class="card" id="card" onclick="flipCard()">
+                <div class="card-face front" id="question"></div>
+                <div class="card-face back" id="answer"></div>
+            </div>
+        </div>
+
+        <button onclick="markCorrect()">Correct</button>
+        <button onclick="markWrong()">Wrong</button>
+    </div>
+
+    <div id="result" class="hidden result"></div>
+
+</div>
+
+<script>
+const flashcards = {
+    math: [
+        {q: "5 + 3 = ?", a: "8"},
+        {q: "12 - 4 = ?", a: "8"},
+        {q: "6 × 2 = ?", a: "12"},
+        {q: "9 ÷ 3 = ?", a: "3"},
+        {q: "Square root of 16?", a: "4"}
+    ],
+    science: [
+        {q: "Water’s chemical formula?", a: "H₂O"},
+        {q: "Planet known as Red Planet?", a: "Mars"},
+        {q: "Gas essential for breathing?", a: "Oxygen"},
+        {q: "Human body’s largest organ?", a: "Skin"},
+        {q: "Speed of light unit?", a: "km/s"}
+    ]
+};
+
+let selectedCards = [];
+let index = 0;
+let score = 0;
+
+function startQuiz() {
+    const topic = document.getElementById("topic").value;
+    const count = parseInt(document.getElementById("count").value);
+
+    if (!count || count < 1) {
+        alert("Enter valid number of questions");
+        return;
+    }
+
+    selectedCards = flashcards[topic].slice(0, count);
+    index = 0;
+    score = 0;
+
+    document.getElementById("setup").classList.add("hidden");
+    document.getElementById("quiz").classList.remove("hidden");
+
+    showCard();
+}
+
+function showCard() {
+    const card = selectedCards[index];
+
+    document.getElementById("card").classList.remove("flip");
+    document.getElementById("question").innerText = card.q;
+    document.getElementById("answer").innerText = card.a;
+}
+
+function flipCard() {
+    document.getElementById("card").classList.toggle("flip");
+}
+
+function markCorrect() {
+    score++;
+    nextCard();
+}
+
+function markWrong() {
+    nextCard();
+}
+
+function nextCard() {
+    index++;
+
+    if (index >= selectedCards.length) {
+        endQuiz();
+    } else {
+        showCard();
+    }
+}
+
+function endQuiz() {
+    document.getElementById("quiz").classList.add("hidden");
+    const resultDiv = document.getElementById("result");
+    resultDiv.classList.remove("hidden");
+    resultDiv.innerText = `Final Score: ${score} / ${selectedCards.length}`;
+}
+</script>
+
+</body>
+</html>
