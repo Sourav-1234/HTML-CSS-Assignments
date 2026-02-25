@@ -1,0 +1,85 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #121212;
+  transition: background 0.4s ease;
+  color: white;
+}
+
+.container {
+  background: rgba(255, 255, 255, 0.05);
+  padding: 30px;
+  border-radius: 12px;
+  text-align: center;
+  backdrop-filter: blur(10px);
+}
+
+h1 {
+  margin-bottom: 20px;
+  font-size: 24px;
+}
+
+.color-panel {
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.color-btn {
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  border: none;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.color-btn:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.4);
+}
+
+/* Preset Colors */
+
+.red { background: red; }
+.blue { background: blue; }
+.green { background: green; }
+.purple { background: purple; }
+
+.custom-color {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+}
+
+input[type="color"] {
+  width: 50px;
+  height: 40px;
+  border: none;
+  cursor: pointer;
+}
+
+#addColor {
+  padding: 10px 15px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  background: white;
+  color: black;
+  font-weight: bold;
+  transition: background 0.2s ease;
+}
+
+#addColor:hover {
+  background: #ddd;
+}

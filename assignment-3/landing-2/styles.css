@@ -1,0 +1,199 @@
+/* RESET */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+body {
+  background: #f3f3f3;
+  display: flex;
+  justify-content: center;
+  padding: 40px;
+}
+
+/* MAIN CONTAINER */
+
+.page-wrapper {
+  width: 100%;
+  max-width: 1200px;
+  background: white;
+  border-radius: 18px;
+  padding: 25px 40px 60px;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.08);
+  position: relative;
+  overflow: hidden;
+}
+
+/* NAVBAR */
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 50px;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-weight: 600;
+}
+
+.logo-icon {
+  width: 18px;
+  height: 18px;
+  background: linear-gradient(135deg, #0ea5ff, black);
+  border-radius: 6px;
+}
+
+nav {
+  display: flex;
+  gap: 30px;
+}
+
+nav a {
+  text-decoration: none;
+  color: #444;
+  font-size: 14px;
+}
+
+.nav-actions {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.signin {
+  text-decoration: none;
+  font-size: 14px;
+  color: #333;
+}
+
+.btn-outline {
+  background: transparent;
+  border: 1px solid #ddd;
+  padding: 8px 16px;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+/* HERO */
+
+.hero {
+  position: relative;
+  text-align: center;
+  padding: 40px 20px;
+  background: radial-gradient(circle, #fafafa, white);
+  border-radius: 16px;
+  border: 1px solid #eee;
+}
+
+/* HERO CONTENT */
+
+.hero-content {
+  max-width: 650px;
+  margin: auto;
+  position: relative;
+  z-index: 2;
+}
+
+.hero-icon {
+  width: 55px;
+  height: 55px;
+  background: linear-gradient(135deg, #0ea5ff, #333);
+  border-radius: 16px;
+  margin: 0 auto 25px;
+}
+
+.hero h1 {
+  font-size: 42px;
+  font-weight: 600;
+  margin-bottom: 15px;
+}
+
+.hero h1 span {
+  color: #999;
+  font-weight: 500;
+}
+
+.hero p {
+  color: #777;
+  margin-bottom: 25px;
+}
+
+/* BUTTON */
+
+.btn-primary {
+  background: #0ea5ff;
+  border: none;
+  color: white;
+  padding: 12px 26px;
+  border-radius: 12px;
+  cursor: pointer;
+  font-weight: 500;
+}
+
+/* FLOATING DECORATIONS */
+
+.floating {
+  position: absolute;
+  background: white;
+  border-radius: 14px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+}
+
+/* Positions */
+
+.left-top {
+  width: 160px;
+  height: 120px;
+  top: 20px;
+  left: 20px;
+}
+
+.left-bottom {
+  width: 180px;
+  height: 100px;
+  bottom: 20px;
+  left: 30px;
+}
+
+.right-top {
+  width: 150px;
+  height: 130px;
+  top: 20px;
+  right: 20px;
+}
+
+.right-bottom {
+  width: 200px;
+  height: 110px;
+  bottom: 20px;
+  right: 30px;
+}
+
+/* RESPONSIVE (Optional but good practice) */
+
+@media (max-width: 768px) {
+
+  .navbar {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  nav {
+    gap: 15px;
+  }
+
+  .hero h1 {
+    font-size: 30px;
+  }
+
+  .floating {
+    display: none; /* Hide decorations on mobile */
+  }
+}

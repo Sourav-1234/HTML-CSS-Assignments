@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Form Builder</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<div class="app">
+  <h1>Dynamic Form Builder</h1>
+
+  <div class="controls">
+    <input type="text" id="labelInput" placeholder="Enter field label...">
+
+    <select id="fieldType">
+      <option value="text">Text Input</option>
+      <option value="checkbox">Checkbox</option>
+      <option value="radio">Radio Buttons</option>
+    </select>
+
+    <button id="addField">Add Field</button>
+  </div>
+
+  <div class="container">
+    <div class="preview">
+      <h2>Form Preview</h2>
+      <form id="formPreview"></form>
+    </div>
+  </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
